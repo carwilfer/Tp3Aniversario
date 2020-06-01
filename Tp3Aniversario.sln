@@ -3,7 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tp3Aniversario", "Tp3Aniversario\Tp3Aniversario.csproj", "{8BEF2101-20FC-45AD-A672-A86FF07B1B3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tp3Aniversario", "Tp3Aniversario\Tp3Aniversario.csproj", "{8BEF2101-20FC-45AD-A672-A86FF07B1B3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{0BA91F86-8029-4264-8926-59A5DA898154}"
+	ProjectSection(SolutionItems) = preProject
+		TP3.txt = TP3.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tp3", "Tp3", "{F90D0025-5F56-4620-90A7-748781412746}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{BB41D1A0-1788-4B5A-846A-1ABE2C3AB088}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +27,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8BEF2101-20FC-45AD-A672-A86FF07B1B3C} = {F90D0025-5F56-4620-90A7-748781412746}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D2157244-8946-4723-8B68-1FCDD6E31E24}

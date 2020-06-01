@@ -1,0 +1,11 @@
+Criar:
+	uma aplicação para o Gerenciamento de Aniversários;
+
+Requesitos:
+	O usuário deve poder inserir e consultar a data do aniversário de pessoas;
+	a aplicação deve pedir o nome e o sobrenome da pessoa;
+	a aplicação deve pedir a sua data de aniversário;
+	a aplicação deve receber o nome completo, ou parte do nome, da pessoa;
+	a aplicação deve retornar todos os resultados que contiverem o nome completo, ou parte do nome, consultado;
+	Quando o usuário selecionar um dos resultados retornados para ver os detalhes da pessoa;
+	a aplicação deve mostrar quanto tempo falta para a data daquele aniversário.

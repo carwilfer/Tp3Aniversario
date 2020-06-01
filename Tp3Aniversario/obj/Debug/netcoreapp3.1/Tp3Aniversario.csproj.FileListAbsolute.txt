@@ -1,0 +1,13 @@
+C:\Users\Carlos Ferreira\Desktop\Desenvolvimento_com_C#\Tp3Aniversario\Tp3Aniversario\obj\Debug\netcoreapp3.1\Tp3Aniversario.csprojAssemblyReference.cache
+C:\Users\Carlos Ferreira\Desktop\Desenvolvimento_com_C#\Tp3Aniversario\Tp3Aniversario\obj\Debug\netcoreapp3.1\Tp3Aniversario.csproj.CoreCompileInputs.cache
+C:\Users\Carlos Ferreira\Desktop\Desenvolvimento_com_C#\Tp3Aniversario\Tp3Aniversario\obj\Debug\netcoreapp3.1\Tp3Aniversario.AssemblyInfoInputs.cache
+C:\Users\Carlos Ferreira\Desktop\Desenvolvimento_com_C#\Tp3Aniversario\Tp3Aniversario\obj\Debug\netcoreapp3.1\Tp3Aniversario.AssemblyInfo.cs
+C:\Users\Carlos Ferreira\Desktop\Desenvolvimento_com_C#\Tp3Aniversario\Tp3Aniversario\bin\Debug\netcoreapp3.1\Tp3Aniversario.exe
+C:\Users\Carlos Ferreira\Desktop\Desenvolvimento_com_C#\Tp3Aniversario\Tp3Aniversario\bin\Debug\netcoreapp3.1\Tp3Aniversario.deps.json
+C:\Users\Carlos Ferreira\Desktop\Desenvolvimento_com_C#\Tp3Aniversario\Tp3Aniversario\bin\Debug\netcoreapp3.1\Tp3Aniversario.runtimeconfig.json
+C:\Users\Carlos Ferreira\Desktop\Desenvolvimento_com_C#\Tp3Aniversario\Tp3Aniversario\bin\Debug\netcoreapp3.1\Tp3Aniversario.runtimeconfig.dev.json
+C:\Users\Carlos Ferreira\Desktop\Desenvolvimento_com_C#\Tp3Aniversario\Tp3Aniversario\bin\Debug\netcoreapp3.1\Tp3Aniversario.dll
+C:\Users\Carlos Ferreira\Desktop\Desenvolvimento_com_C#\Tp3Aniversario\Tp3Aniversario\bin\Debug\netcoreapp3.1\Tp3Aniversario.pdb
+C:\Users\Carlos Ferreira\Desktop\Desenvolvimento_com_C#\Tp3Aniversario\Tp3Aniversario\obj\Debug\netcoreapp3.1\Tp3Aniversario.dll
+C:\Users\Carlos Ferreira\Desktop\Desenvolvimento_com_C#\Tp3Aniversario\Tp3Aniversario\obj\Debug\netcoreapp3.1\Tp3Aniversario.pdb
+C:\Users\Carlos Ferreira\Desktop\Desenvolvimento_com_C#\Tp3Aniversario\Tp3Aniversario\obj\Debug\netcoreapp3.1\Tp3Aniversario.genruntimeconfig.cache
