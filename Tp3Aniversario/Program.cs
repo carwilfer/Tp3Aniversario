@@ -66,8 +66,6 @@ namespace Tp3Aniversario
             pessoa.DataNascimento = niver;
             pessoa.DataDeCadastro = dataDeCadastro;
 
-            BancoDeDados.pessoaCadastrada.Add(pessoa);
-
             BancoDeDados.Salvar(pessoa);
 
             StatusCadastro();
@@ -110,8 +108,8 @@ namespace Tp3Aniversario
                 case "2":
                     ConsultarPelaData(); break;
 
-                case "3":
-                    ConsultaPeloSobreNome(); break;
+                //case "3":
+                //    ConsultaPeloSobreNome(); break;
 
                 default:
                     EscreverNaTela("Consulta incorreta");
@@ -160,36 +158,10 @@ namespace Tp3Aniversario
         {
             EscreverNaTela("Entre com o nome da pessoa: ");
             string nome = Console.ReadLine();
-
-            var pessoaEncontrada = BancoDeDados.BuscarTodasPessoas().Where(pessoa => pessoa.Nome.Contains(nome, StringComparison.OrdinalIgnoreCase));
-
-            int quantidadePessoaEncontrada = pessoaEncontrada.Count();
-
-            if (quantidadePessoaEncontrada > 0)
-            {
-                EscreverNaTela("Pessoa encontrada");
-
-                foreach (var pessoa in pessoaEncontrada)
-                {
-                    Console.WriteLine(pessoa.Nome);
-                }
-
-            }
-            else
-            {
-                EscreverNaTela("Nenhuma pessoa encontrada para o nome digitado: " + nome);
-            }
-
-            MenuPrincipal();
-
-        }
-
-        static void ConsultaPeloSobreNome()
-        {
-            EscreverNaTela("Entre com o nome da pessoa: ");
+            EscreverNaTela("Entre com o sobrenome: ");
             string sobreNome = Console.ReadLine();
 
-            var pessoaEncontrada = BancoDeDados.BuscarTodasPessoas().Where(pessoa => pessoa.SobreNome.Contains(sobreNome, StringComparison.OrdinalIgnoreCase));
+            var pessoaEncontrada = BancoDeDados.BuscarTodasPessoas().Where(pessoa => pessoa.Nome.Contains(nome, StringComparison.OrdinalIgnoreCase) || pessoa.SobreNome.Contains(sobreNome, StringComparison.OrdinalIgnoreCase));
 
             int quantidadePessoaEncontrada = pessoaEncontrada.Count();
 
@@ -199,18 +171,47 @@ namespace Tp3Aniversario
 
                 foreach (var pessoa in pessoaEncontrada)
                 {
-                    Console.WriteLine(pessoa.SobreNome);
+                    Console.WriteLine(pessoa.Nome + " " + pessoa.SobreNome);
+                    Console.WriteLine(VerificarProximoAniversario(pessoa));
                 }
 
             }
             else
             {
-                EscreverNaTela("Nenhuma pessoa encontrada para o nome digitado: " + sobreNome);
+                EscreverNaTela("Nenhuma pessoa encontrada para o nome digitado: " + nome + " " + sobreNome);
             }
 
             MenuPrincipal();
 
         }
+
+        //static void ConsultaPeloSobreNome()
+        //{
+        //    EscreverNaTela("Entre com o nome da pessoa: ");
+        //    string sobreNome = Console.ReadLine();
+
+        //    var pessoaEncontrada = BancoDeDados.BuscarTodasPessoas().Where(pessoa => pessoa.SobreNome.Contains(sobreNome, StringComparison.OrdinalIgnoreCase));
+
+        //    int quantidadePessoaEncontrada = pessoaEncontrada.Count();
+
+        //    if (quantidadePessoaEncontrada > 0)
+        //    {
+        //        EscreverNaTela("Pessoa encontrada");
+
+        //        foreach (var pessoa in pessoaEncontrada)
+        //        {
+        //            Console.WriteLine(pessoa.SobreNome);
+        //        }
+
+        //    }
+        //    else
+        //    {
+        //        EscreverNaTela("Nenhuma pessoa encontrada para o nome digitado: " + sobreNome);
+        //    }
+
+        //    MenuPrincipal();
+
+        //}
 
         static void ConsultarPelaData()
         {
@@ -224,8 +225,29 @@ namespace Tp3Aniversario
             foreach (var pessoa in filtroPessoaPelaDataNascimento)
             {
                 Console.WriteLine(pessoa.Nome);
+                Console.WriteLine(VerificarProximoAniversario(pessoa));
             }
             MenuPrincipal();
+        }
+
+        static string VerificarProximoAniversario(Pessoa pessoa)
+        {
+            string retorno;
+            DateTime aniversarioAnoCorrente = new DateTime(DateTime.Now.Year, pessoa.DataNascimento.Month, pessoa.DataNascimento.Day);
+            if (aniversarioAnoCorrente.Date > DateTime.Now.Date)
+            {
+                TimeSpan ts = aniversarioAnoCorrente.Date - DateTime.Now.Date;
+                retorno = string.Format("Faltam {0} dias para seu aniversário.", ts.Days);
+            }
+            else
+            {
+                DateTime aniversarioProximoAno = new DateTime(DateTime.Now.Year + 1, pessoa.DataNascimento.Month, pessoa.DataNascimento.Day);
+                TimeSpan ts = aniversarioProximoAno.Date - DateTime.Now.Date;
+                retorno = string.Format("Faltam {0} dias para seu aniversário.", ts.Days);
+            }
+
+            return retorno;
+
         }
 
     }
